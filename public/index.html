@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/2022-09-20_01h28_31.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e47616" />
+    <title>🎲 Roll 'n' Guess</title>
+	<meta property="og:title" content="🎲 Roll 'n' Guess" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://obasitheanalyst.github.io/roll-n-guess/" />
+	<meta property="og:image" content="2022-09-20_01h28_31.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:description" content="... want to test your guessing ability? then be rest assured you are in the right place.">
+	<meta property="og:site_name" content="Test Your Ability">
+	<meta name="keywords" content="Roll, dice, guess game, guess test, die game">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/2022-09-20_01h28_31.png" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/style.css">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="wrapper" class="fade-in">
+		<div id="not">
+			<div class="note" role="status">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgb(159, 153, 153, 0.8)" class="bi bi-dice-6-fill" viewBox="0 0 16 16">
+					<path class="path" d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm1 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm8 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm1.5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM12 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM4 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+				</svg>
+			</div>
+			<div class="loading" style="font-size: 14px;">Loading</div>
+		</div>
+		<div id="load">
+			<div id="root"></div>
+		</div>
+    </div>
+
+
+    <script>
+			document.getElementById('load').style.display='none';
+			window.addEventListener('load',hide)
+			function hide(){
+				document.getElementById('not').style.display='none'
+				document.getElementById('load').style.display='block'
+			}
+			document.getElementById("wrapper").style.minHeight=""+screen.availHeight+"px"
+	</script>
+  </body>
+</html>

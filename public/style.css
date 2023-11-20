@@ -1,0 +1,145 @@
+/* Wrapper */
+
+#wrapper {
+    -moz-transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    position: relative;
+    background-size: auto;
+    background-position: center,								center,														bottom center;
+    background-repeat:no-repeat;
+    background-attachment: scroll,								scroll,														scroll;
+    z-index: 1;
+    padding: 5%;
+    overflow: hidden;
+    justify-content: space-around;
+    animation: motion 30s 3s infinite ease-in-out;
+    background-image: linear-gradient(to top right, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+}
+
+.path{
+    animation: path 3s infinite ease-in-out;
+}
+@keyframes path {
+    0%{
+        opacity: 0.8;
+        motion-path: stroke-box;
+    }
+    100%{
+        opacity: 1;
+        motion-path:fill-box;
+    }
+}
+.loading{
+    font-weight: bolder;
+    animation: loading 3s infinite ease-in-out;
+}
+@keyframes loading {
+    0%{
+        font-style: italic;
+        color:aliceblue;
+        letter-spacing: 0.01cm;
+        scale: 1
+    }
+    50%{
+        font-style:normal;
+        color:purple;
+        letter-spacing: 0.009cm;
+        scale: 1.1
+    }
+    100%{
+        font-style:oblique;
+        color:red;
+        letter-spacing: 0.008cm;
+        scale: 1.2
+    }
+}
+
+@keyframes motion {
+    0%{
+        background-image: linear-gradient(to bottom left, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+    }
+    25%{
+        background-image: linear-gradient(to top left, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+    }
+    50%{
+        background-image: linear-gradient(to bottom right, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+    }
+    75%{
+        background-image: radial-gradient(ellipse, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+    }
+    100%{
+        background-image: linear-gradient(to top right, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+    }
+}
+
+    #wrapper > .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top right, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+        background-size: auto,								auto,														auto;
+        background-position: center,								center,														top center;
+        background-repeat: repeat,								no-repeat,													no-repeat;
+        background-attachment: scroll,								scroll,														scroll;
+        min-height: fit-content;
+        color: #e47616
+    }
+
+        #wrapper > .bg.fixed {
+            position: fixed;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            
+        }
+
+    #wrapper.fade-in:before {
+        pointer-events: none;
+        -moz-transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+        -moz-transition-delay: 0.75s;
+        -webkit-transition-delay: 0.75s;
+        -ms-transition-delay: 0.75s;
+        transition-delay: 0.75s;
+        background-image: linear-gradient(to top right, orange 0%, red 25%, brown 50%, blue 75%, purple 100%);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    body.is-preload #wrapper.fade-in:before {
+        opacity: 1;
+    }
+
+    @media screen and (orientation: portrait) {
+
+        #wrapper > .bg {
+            background-size: auto,								auto,														auto 175%;
+        }
+
+    }
+
+#not{
+    margin-top: 20%;
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content:center;
+    gap: 4%;
+}
